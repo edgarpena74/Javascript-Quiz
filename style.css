@@ -1,0 +1,9 @@
+body {
+}
+
+main {
+  width: 500px;
+  height: 500px;
+  background: black;
+  margin: auto;
+}
