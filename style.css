@@ -56,5 +56,12 @@ body #quiz #centerBox {
 }
 
 .rowBtn {
-  align-content: center;
+  margin-top: 25% !important;
+  justify-content: center !important;
+}
+
+#begin {
+  font-size: 50px;
+  color: blue;
+  background: pink;
 }
