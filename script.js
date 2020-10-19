@@ -50,11 +50,15 @@ let funkArray = [
 
 console.log(JSON.stringify(funkArray))
 
-for (let index = 0; index < funkArray.length; index++) {
-     let quiz = funkArray[index];
+let nuArray = JSON.stringify(funkArray)
+
+console.log(nuArray)
+
+// for (let index = 0; index < funkArray.length; index++) {
+//      let quiz = funkArray[index];
 
     
-}
+// }
 
 
 
