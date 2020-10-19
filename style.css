@@ -41,8 +41,20 @@ body #quiz #centerBox {
 
 #answerSection {
   margin: 0% !important;
-  padding: 30px !important;
+  padding: 10px !important;
   padding-top: 0% !important;
   justify-content: left;
   justify-content: center;
+}
+.rowQ {
+  border-bottom: thick white solid;
+}
+
+#intro {
+  font-size: 40px;
+  text-align: center !important;
+}
+
+.rowBtn {
+  align-content: center;
 }
