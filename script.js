@@ -29,20 +29,20 @@ let funkArray = [
     },
 
     {
-        question : "do you want the funk?",
-        answerA  : "yeah",
-        answerB  :  "funky",
-        answerC  : " funky funk",
-        answerD  :"we want the funk!",
+        question : "do you want the funk?****",
+        answerA  : "yeah****",
+        answerB  :  "funky****",
+        answerC  : " funky funk****",
+        answerD  :"we want the funk!**",
         correctAnswer : "b",
     },
     
     {
-        question : "do you want the funk?",
-        answerA  : "yeah",
-        answerB  :  "funky",
-        answerC  : " funky funk",
-        answerD  :"we want the funk!",
+        question : "do you want the funk?////",
+        answerA  : "yeah////",
+        answerB  :  "funky////",
+        answerC  : " funky funk////",
+        answerD  :"we want the funk!////",
         correctAnswer : "c",
     }
 
