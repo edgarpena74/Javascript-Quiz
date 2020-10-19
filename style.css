@@ -1,9 +1,48 @@
 body {
 }
 
-main {
+body #quiz #centerBox {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#centerBox {
   width: 500px;
   height: 500px;
   background: black;
-  margin: auto;
+  color: white;
+  /* margin: auto;
+  display: flex;
+  justify-content: center;
+  justify-self: center; */
+}
+
+#container {
+  border-color: tomato;
+  /* THIS IS FOR NOW IT WONT R
+  REALLY CHANGE ANYTHING UNLESS I SPECIFY BORDERSTYLING */
+}
+
+#jsHeader {
+  justify-content: center;
+  margin-bottom: 15px !important;
+}
+
+#questionSection {
+  justify-content: center;
+  margin: 0% !important;
+  padding: 30px !important;
+  padding-top: 0% !important;
+  padding-bottom: 0% !important;
+}
+
+#answerSection {
+  margin: 0% !important;
+  padding: 30px !important;
+  padding-top: 0% !important;
+  justify-content: left;
+  justify-content: center;
 }
