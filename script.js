@@ -17,49 +17,46 @@ let next = document.querySelector("#next");
 let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
+let funkArray = [
+    {
+        question : "do you want the funk?",
+        answerA  : "yeah",
+        answerB  :  "funky",
+        answerC  : " funky funk",
+        answerD  :"we want the funk!",
+        correctAnswer : "a",
 
+    },
 
-function nu1 () {
-    question.textContent = "do you want the funk?";
-    answerA.textContent = "yeah";
-    answerB.textContent = "funky";
-    answerC.textContent = " funky funk";
-    answerD.textContent = "we want the funk!";
+    {
+        question : "do you want the funk?",
+        answerA  : "yeah",
+        answerB  :  "funky",
+        answerC  : " funky funk",
+        answerD  :"we want the funk!",
+        correctAnswer : "b",
+    },
+    
+    {
+        question : "do you want the funk?",
+        answerA  : "yeah",
+        answerB  :  "funky",
+        answerC  : " funky funk",
+        answerD  :"we want the funk!",
+        correctAnswer : "c",
+    }
+
+]
+
+console.log(JSON.stringify(funkArray))
+
+for (let index = 0; index < funkArray.length; index++) {
+     let quiz = funkArray[index];
+
+    
 }
-console.log(nu1)
-
-function nu2 () {
-    question.textContent = "do you want the funk?";
-    answerA.textContent = " yeah";
-    answerB.textContent = "funky";
-    answerC.textContent = " funky funk";
-    answerD.textContent = "we want the funk!";
-}
-console.log(nu2)
-
-function nu3 () {
-    question.textContent = "do you want the funk?";
-    answerA.textContent = "yeah";
-    answerB.textContent = "funky";
-    answerC.textContent = " funky funk";
-    answerD.textContent = "we want the funk!";
-}
-console.log(nu3)
-
-let funkArray = [nu1,nu2,nu3];
-
-let correctAnswers = ["a","b","c",]
-let userAnswers = ["a","b","c"]
-console.log(userAnswers + correctAnswers)
 
 
-console.log(funkArray + " " + "woah it wokred")
-
-if (begin === true) {
-    nu1()
-    console.log(nu1)
-
-}
 
 
 
