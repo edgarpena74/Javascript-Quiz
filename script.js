@@ -11,6 +11,9 @@ let submitD = document.querySelector("#submitD");
 let answerD = document.querySelector("#answerD");
 let next = document.querySelector("#next");
 
+
+
+
 let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
@@ -43,14 +46,21 @@ function nu3 () {
 }
 console.log(nu3)
 
+let funkArray = [nu1,nu2,nu3];
 
-
-let correctAnswers = ["a","b","c"]
+let correctAnswers = ["a","b","c",]
 let userAnswers = ["a","b","c"]
 console.log(userAnswers + correctAnswers)
 
-let funkArray = [nu1,nu2,nu3];
 
 console.log(funkArray + " " + "woah it wokred")
+
+if (begin === true) {
+    nu1()
+    console.log(nu1)
+
+}
+
+
 
 
