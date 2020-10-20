@@ -1,15 +1,5 @@
-let question1 = {
-    question: What is your favorite color?,
-    optionA: blue,
-    optionB: black,
-    Answer: blue
+function quizzer (){
+    console.log("ive been clicked")
+    console.log(next)
+    nu2();
 }
-
-let question2 = {
-    question: What is your favorite fruit?,
-    optionA: oranges,
-    optionB: apples,
-    Answer: oranges
-}
-
-let arr = [question1, question2]

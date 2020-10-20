@@ -16,45 +16,9 @@ let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
 
-// let funkArray = [
-//     {
-//         question : "do you want the funk?",
-//         answerA  : "yeah",
-//         answerB  :  "funky",
-//         answerC  : " funky funk",
-//         answerD  :"we want the funk!",
-//         correctAnswer : "a",
-
-//     },
-
-//     {
-//         question : "do you want the funk?****",
-//         answerA  : "yeah****",
-//         answerB  :  "funky****",
-//         answerC  : " funky funk****",
-//         answerD  :"we want the funk!**",
-//         correctAnswer : "b",
-//     },
-    
-//     {
-//         question : "do you want the funk?////",
-//         answerA  : "yeah////",
-//         answerB  :  "funky////",
-//         answerC  : " funky funk////",
-//         answerD  :"we want the funk!////",
-//         correctAnswer : "c",
-//     }
-
-// ]
-
-// console.log(JSON.stringify(funkArray))
-
-// let nuArray = JSON.stringify(funkArray)
-
-// console.log(nuArray)
-
 
 function nu1 () {
+    console.log("I am de wan")
     question.textContent = "do you want the funk?";
     answerA.textContent = "yeah";
     answerB.textContent = "funky";
@@ -81,11 +45,29 @@ function nu3 () {
 }
 console.log(nu3)
 
+
 if (begin === true) {
     nu1()
+    console.log("first part has been executed")
+  
 }
 
-next.addEventListener("click", nu2())
+next.addEventListener("click", function quizzer (){
+    console.log("ive been clicked")
+    console.log(next)
+    nu2();
+})
+
+
+
+
+console.log(question)
+console.log(answerA)
+console.log(answerB)
+console.log(answerC)
+console.log(answerD)
+
+
 
 
 
