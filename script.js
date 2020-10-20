@@ -15,48 +15,32 @@ let next = document.querySelector("#next");
 let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
+let funkArray = [
+    {
+        question : "do you want the funk?",
+        answers : ["yeah", "funky", "funky funk", "we want the funk!"],
+        correctAnswer : "a"
 
+    },
 
-function nu1 () {
-    console.log("I am de wan")
-    question.textContent = "do you want the funk?";
-    answerA.textContent = "yeah";
-    answerB.textContent = "funky";
-    answerC.textContent = " funky funk";
-    answerD.textContent = "we want the funk!";
-}
-console.log(nu1)
+    {
+        question : "do you want the funk?***",
+        answers : ["yeah**", "funky**", "funky funk**", "we want the funk!**"],
+        correctAnswer : "b"
+    },
 
-function nu2 () {
-    question.textContent = "do you want the funk?*****";
-    answerA.textContent = " yeah***";
-    answerB.textContent = "funky**";
-    answerC.textContent = " funky funk**";
-    answerD.textContent = "we want the funk!**";
-}
-console.log(nu2)
+    {
+        question : "do you want the funk?//",
+        answers : ["yeah//", "funky//", "funky funk//", "we want the funk!//"],
+        correctAnswer : "c"
+    }
 
-function nu3 () {
-    question.textContent = "do you want the funk?///";
-    answerA.textContent = "yeah//";
-    answerB.textContent = "funky//";
-    answerC.textContent = " funky funk//";
-    answerD.textContent = "we want the funk!//";
-}
-console.log(nu3)
+]
 
+let counter = 0;
 
-if (begin === true) {
-    nu1()
-    console.log("first part has been executed")
-  
-}
+funkArray[counter];
 
-next.addEventListener("click", function quizzer (){
-    console.log("ive been clicked")
-    console.log(next)
-    nu2();
-})
 
 
 
