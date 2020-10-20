@@ -12,53 +12,85 @@ let answerD = document.querySelector("#answerD");
 let next = document.querySelector("#next");
 
 
-
-
 let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
-let funkArray = [
-    {
-        question : "do you want the funk?",
-        answerA  : "yeah",
-        answerB  :  "funky",
-        answerC  : " funky funk",
-        answerD  :"we want the funk!",
-        correctAnswer : "a",
 
-    },
+// let funkArray = [
+//     {
+//         question : "do you want the funk?",
+//         answerA  : "yeah",
+//         answerB  :  "funky",
+//         answerC  : " funky funk",
+//         answerD  :"we want the funk!",
+//         correctAnswer : "a",
 
-    {
-        question : "do you want the funk?****",
-        answerA  : "yeah****",
-        answerB  :  "funky****",
-        answerC  : " funky funk****",
-        answerD  :"we want the funk!**",
-        correctAnswer : "b",
-    },
+//     },
+
+//     {
+//         question : "do you want the funk?****",
+//         answerA  : "yeah****",
+//         answerB  :  "funky****",
+//         answerC  : " funky funk****",
+//         answerD  :"we want the funk!**",
+//         correctAnswer : "b",
+//     },
     
-    {
-        question : "do you want the funk?////",
-        answerA  : "yeah////",
-        answerB  :  "funky////",
-        answerC  : " funky funk////",
-        answerD  :"we want the funk!////",
-        correctAnswer : "c",
-    }
+//     {
+//         question : "do you want the funk?////",
+//         answerA  : "yeah////",
+//         answerB  :  "funky////",
+//         answerC  : " funky funk////",
+//         answerD  :"we want the funk!////",
+//         correctAnswer : "c",
+//     }
 
-]
+// ]
 
-console.log(JSON.stringify(funkArray))
+// console.log(JSON.stringify(funkArray))
 
-let nuArray = JSON.stringify(funkArray)
+// let nuArray = JSON.stringify(funkArray)
 
-console.log(nuArray)
+// console.log(nuArray)
 
-// for (let index = 0; index < funkArray.length; index++) {
-//      let quiz = funkArray[index];
 
-    
-// }
+function nu1 () {
+    question.textContent = "do you want the funk?";
+    answerA.textContent = "yeah";
+    answerB.textContent = "funky";
+    answerC.textContent = " funky funk";
+    answerD.textContent = "we want the funk!";
+}
+console.log(nu1)
+
+function nu2 () {
+    question.textContent = "do you want the funk?";
+    answerA.textContent = " yeah";
+    answerB.textContent = "funky";
+    answerC.textContent = " funky funk";
+    answerD.textContent = "we want the funk!";
+}
+console.log(nu2)
+
+function nu3 () {
+    question.textContent = "do you want the funk?";
+    answerA.textContent = "yeah";
+    answerB.textContent = "funky";
+    answerC.textContent = " funky funk";
+    answerD.textContent = "we want the funk!";
+}
+console.log(nu3)
+
+if (begin === true) {
+    nu1()
+}
+
+next.addEventListener("click", nu2())
+
+
+
+
+
 
 
 
