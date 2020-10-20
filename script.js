@@ -38,9 +38,6 @@ let funkArray = [
 ]
 
 let counter = 0;
-
-
-
 let nextQuestion = function(){
     console.log(funkArray[counter])
   
@@ -52,14 +49,41 @@ let nextQuestion = function(){
     answerC.textContent = funkArray[counter].answers[2];
     answerD.textContent = funkArray[counter].answers[3];
 
-    console.log(theQuestion)
-  }
+    //hide next button until answerCLick function is executed
+    next.style.visibility = "hidden"
 
-let increment = function click() {
-    count++;
+    console.log(theQuestion + " " + "WOAH IT WORKS!!!!!!!")
 }
+
+let nextButton = function click() {
+   
+    counter++;
+    console.log(counter)
+    nextQuestion();
+}
+
 nextQuestion();
 
+let answersArray = []
+let answerClick = function(){
+  //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
+  console.log(submit.value) 
+
+  //this line grabs the next button and makes it visible
+  next.style.visibility = "visible"
+
+  //change the answersArray at index "counter" to the selected answer choice (a-d)
+  answersArray[counter] = submit.value
+}
+submitA.addEventListener("click", answerClick ())
+submitB.addEventListener("click", answerClick ())
+submitC.addEventListener("click", answerClick ())
+submitD.addEventListener("click", answerClick ())
+
+console.log(answerClick())
+console.log(answersArray)
+
+nextButton
 
 
 
