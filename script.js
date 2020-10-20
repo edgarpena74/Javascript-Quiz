@@ -64,20 +64,20 @@ function nu1 () {
 console.log(nu1)
 
 function nu2 () {
-    question.textContent = "do you want the funk?";
-    answerA.textContent = " yeah";
-    answerB.textContent = "funky";
-    answerC.textContent = " funky funk";
-    answerD.textContent = "we want the funk!";
+    question.textContent = "do you want the funk?*****";
+    answerA.textContent = " yeah***";
+    answerB.textContent = "funky**";
+    answerC.textContent = " funky funk**";
+    answerD.textContent = "we want the funk!**";
 }
 console.log(nu2)
 
 function nu3 () {
-    question.textContent = "do you want the funk?";
-    answerA.textContent = "yeah";
-    answerB.textContent = "funky";
-    answerC.textContent = " funky funk";
-    answerD.textContent = "we want the funk!";
+    question.textContent = "do you want the funk?///";
+    answerA.textContent = "yeah//";
+    answerB.textContent = "funky//";
+    answerC.textContent = " funky funk//";
+    answerD.textContent = "we want the funk!//";
 }
 console.log(nu3)
 
