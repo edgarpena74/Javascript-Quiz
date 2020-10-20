@@ -51,8 +51,13 @@ let nextQuestion = function(){
     answerB.textContent = funkArray[counter].answers[1];
     answerC.textContent = funkArray[counter].answers[2];
     answerD.textContent = funkArray[counter].answers[3];
+
     console.log(theQuestion)
   }
+
+let increment = function click() {
+    count++;
+}
 nextQuestion();
 
 
