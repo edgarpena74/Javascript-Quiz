@@ -38,6 +38,25 @@ let funkArray = [
 ]
 
 let counter = 0;
+
+
+let answerClick = function(){
+    //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
+    console.log("made it here");
+    console.log("WHY U NO WERK?????");
+    
+  
+    //this line grabs the next button and makes it visible
+    next.style.visibility = "visible";
+  
+    //change the answersArray at index "counter" to the selected answer choice (a-d)
+    //   answersArray[counter] = value
+    //   let value  = this.getAttribute("data-answer");
+    let value = this.value;  
+      
+      console.log(value);
+  }
+
 let nextQuestion = function(){
     console.log(funkArray[counter])
   
@@ -48,6 +67,19 @@ let nextQuestion = function(){
     answerB.textContent = funkArray[counter].answers[1];
     answerC.textContent = funkArray[counter].answers[2];
     answerD.textContent = funkArray[counter].answers[3];
+
+    submitA.setAttribute("value", funkArray[counter].answers[0]);
+    answerB.setAttribute("value", funkArray[counter].answers[1]);
+    answerC.setAttribute("value", funkArray[counter].answers[2]);
+    answerD.setAttribute("value", funkArray[counter].answers[3]);
+
+    submitA.setAttribute("class", "answer");
+    answerB.setAttribute("class", "answer");
+    answerC.setAttribute("class", "answer");
+    answerD.setAttribute("class", "answer");
+
+    document.querySelector(".answer").addEventListener("click", answerClick);
+    
 
     //hide next button until answerCLick function is executed
     next.style.visibility = "hidden"
@@ -65,32 +97,14 @@ let nextButton = function click() {
 nextQuestion();
 
 let answersArray = []
-let answerClick = function(){
-  //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
-  console.log("made it here");
-  console.log("WHY U NO WERK?????");
-  
 
-  //this line grabs the next button and makes it visible
-  next.style.visibility = "visible";
-
-  //change the answersArray at index "counter" to the selected answer choice (a-d)
-  //   answersArray[counter] = value
-    var value  = this.getAttribute("data-answer");
-    answerA.setAttribute("data-answer", funkArray[counter].answers[0]);
-    answerB.setAttribute("data-answer", funkArray[counter].answers[1]);
-    answerC.setAttribute("data-answer", funkArray[counter].answers[2]);
-    answerD.setAttribute("data-answer", funkArray[counter].answers[3]);
-    
-  console.log(value);
-}
-submitA.addEventListener("click", answerClick)
+/*submitA.addEventListener("click", answerClick)
 submitB.addEventListener("click", answerClick)
 submitC.addEventListener("click", answerClick)
-submitD.addEventListener("click", answerClick)
+submitD.addEventListener("click", answerClick)*/
 
-console.log(answerClick)
-console.log(answersArray)
+// console.log(answerClick)
+// console.log(answersArray)
 
 
 
