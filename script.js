@@ -67,23 +67,26 @@ nextQuestion();
 let answersArray = []
 let answerClick = function(){
   //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
-  console.log(submit.value) 
+  console.log("made it here")
+  console.log("WHY U NO WERK?????")
+  
 
   //this line grabs the next button and makes it visible
   next.style.visibility = "visible"
 
   //change the answersArray at index "counter" to the selected answer choice (a-d)
-  answersArray[counter] = submit.value
+  answersArray[counter] = value
+  console.log(value) 
 }
-submitA.addEventListener("click", answerClick ())
-submitB.addEventListener("click", answerClick ())
-submitC.addEventListener("click", answerClick ())
-submitD.addEventListener("click", answerClick ())
+submitA.addEventListener("click", answerClick)
+submitB.addEventListener("click", answerClick)
+submitC.addEventListener("click", answerClick)
+submitD.addEventListener("click", answerClick)
 
-console.log(answerClick())
+console.log(answerClick)
 console.log(answersArray)
 
-nextButton
+
 
 
 
