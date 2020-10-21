@@ -43,7 +43,7 @@ let counter = 0;
 let answerClick = function(){
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
     console.log("made it here");
-    console.log("WHY U NO WERK?????");
+   
     
   
     //this line grabs the next button and makes it visible
