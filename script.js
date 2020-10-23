@@ -15,6 +15,8 @@ let next = document.querySelector("#next");
 let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
+
+
 let funkArray = [
     {
         question : "do you want the funk? huuhhh?",
@@ -40,21 +42,21 @@ let funkArray = [
 let counter = 0;
 
 
-let answerClick = function(){
+let answerClick = function(e){
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
-    
-    let value  = this.getAttribute("data-value"); 
+    console.log(e + "    this")
+    let value  = e.target.getAttribute("data-value"); 
   
     //this line grabs the next button and makes it visible
     next.style.visibility = "visible";
   
     //change the answersArray at index "counter" to the selected answer choice (a-d)
-    //   answersArray[counter] = value
+    //   answersArray[countSer] = value
     //   let value  = this.getAttribute("data-answer");
     // let value = this.value;  
     
       
-      console.log(value);
+      console.log(value + "   value");
   }
 
 let nextQuestion = function(){
@@ -73,10 +75,10 @@ let nextQuestion = function(){
     answerC.setAttribute("value", funkArray[counter].answers[2]);
     answerD.setAttribute("value", funkArray[counter].answers[3]);
 
-    submitA.setAttribute("class", "answer");
-    answerB.setAttribute("class", "answer");
-    answerC.setAttribute("class", "answer");
-    answerD.setAttribute("class", "answer");
+    // submitA.setAttribute("id", "answer");
+    // submitB.setAttribute("id", "answer");
+    // submitC.setAttribute("id", "answer");
+    // submitD.setAttribute("id", "answer");
 
     // document.querySelector(".answer").addEventListener("click", answerClick);
     
@@ -98,11 +100,11 @@ nextQuestion();
 
 let answersArray = []
 
+
 submitA.addEventListener("click", answerClick)
 submitB.addEventListener("click", answerClick)
 submitC.addEventListener("click", answerClick)
 submitD.addEventListener("click", answerClick)
-
 
 
 /*submitA.addEventListener("click", answerClick)
