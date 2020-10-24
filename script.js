@@ -47,7 +47,7 @@ let answersArray = []
 let answerClick = function(e){
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
     console.log(e + "    this")
-    let value  = e.target.getAttribute("data-value"); 
+    let value  = this.getAttribute("data-value"); 
   
     //this line grabs the next button and makes it visible
     next.style.visibility = "visible";
@@ -75,6 +75,7 @@ let answerClick = function(e){
     
 }
 
+// answerClick();
 
 console.log(answersArray + "   did it work?")
 
