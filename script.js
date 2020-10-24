@@ -16,6 +16,8 @@ let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
 
+let answersArray = []
+
 
 let funkArray = [
     {
@@ -57,7 +59,17 @@ let answerClick = function(e){
     
       
       console.log(value + "   value");
-  }
+        
+
+    answersArray.push(value)
+    console.log("    ***" + answersArray)
+}
+
+// console.log("    ***" + answersArray)
+ 
+
+
+ 
 
 let nextQuestion = function(){
     console.log(funkArray[counter])
@@ -70,10 +82,10 @@ let nextQuestion = function(){
     answerC.textContent = funkArray[counter].answers[2];
     answerD.textContent = funkArray[counter].answers[3];
 
-    answerA.setAttribute("value", funkArray[counter].answers[0]);
-    answerB.setAttribute("value", funkArray[counter].answers[1]);
-    answerC.setAttribute("value", funkArray[counter].answers[2]);
-    answerD.setAttribute("value", funkArray[counter].answers[3]);
+    // answerA.setAttribute("data-value", funkArray[counter].answers[0]);
+    // answerB.setAttribute("data-value", funkArray[counter].answers[1]);
+    // answerC.setAttribute("data-value", funkArray[counter].answers[2]);
+    // answerD.setAttribute("data-value", funkArray[counter].answers[3]);
 
     // submitA.setAttribute("id", "answer");
     // submitB.setAttribute("id", "answer");
@@ -98,7 +110,6 @@ let nextButton = function click() {
 
 nextQuestion();
 
-let answersArray = []
 
 
 submitA.addEventListener("click", answerClick)
