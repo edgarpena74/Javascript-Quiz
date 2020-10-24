@@ -30,13 +30,13 @@ let funkArray = [
     {
         question : "do you want the funk?***",
         answers : ["yeah**", "funky**", "funky funk**", "we want the funk!**"],
-        correctAnswer : "b"
+        correctAnswer : "a"
     },
 
     {
         question : "do you want the funk?//",
         answers : ["yeah//", "funky//", "funky funk//", "we want the funk!//"],
-        correctAnswer : "c"
+        correctAnswer : "a"
     }
 
 ]
@@ -63,11 +63,13 @@ let answerClick = function(e){
     console.log(answersArray + "   ******this will show if popped")
     answersArray.push(value)
     console.log(answersArray + "***** new value")
+
+    
+   
       
    
 
-    
-      
+
         
 
    
@@ -75,9 +77,29 @@ let answerClick = function(e){
     
 }
 
-// answerClick();
 
-console.log(answersArray + "   did it work?")
+let timer = function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
 
 
 
@@ -124,7 +146,8 @@ let nextButton = function click() {
 }
 
 nextQuestion();
-// answerClick();
+startTimer();
+
 
 
 
