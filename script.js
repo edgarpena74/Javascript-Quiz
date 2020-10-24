@@ -42,7 +42,7 @@ let funkArray = [
 ]
 
 let counter = 0;
-let answersArray = []
+let answerChosen = ""
 
 let answerClick = function(e){
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
@@ -56,40 +56,21 @@ let answerClick = function(e){
     //   answersArray[countSer] = value
     //   let value  = this.getAttribute("data-answer");
     // let value = this.value;  
-    console.log(answersArray + "   ****value before pop");
-    if(this){
-        answersArray.pop()
-    }
-    console.log(answersArray + "   ******this will show if popped")
-    answersArray.push(value)
-    console.log(answersArray + "***** new value")
+    
+    // console.log(answer + "   ****value before pop");
+    // if(this){
+    //     answersArray.pop()
+    // }
+    // console.log(answer + "   ******this will show if popped")
+    // answersArray.push(value)
+    // console.log(answer + "***** new value")
 
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-            setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
-    
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-    
-            display.textContent = minutes + ":" + seconds;
-    
-            if (--timer < 0) {
-                timer = duration;
-            }
-        }, 1000);
-        
-    }
-    
-    window.onload = function () {
-        var twoMinutes = 60 * 2,
-            display = document.querySelector('#time');
-        startTimer(twoMinutes, display);
-    };
+    answerChosen = value;
+
+    console.log(answerChosen + "   this is the answer chosen")
 
     
-    startTimer();
+    
    
       
    
