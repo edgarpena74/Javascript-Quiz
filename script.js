@@ -78,9 +78,9 @@ let answerClick = function(e){
 }
 
 
-let timer = function startTimer(duration, display) {
+function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+        setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -93,12 +93,13 @@ let timer = function startTimer(duration, display) {
             timer = duration;
         }
     }, 1000);
+    
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 5,
+    var twoMinutes = 60 * 2,
         display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
+    startTimer(twoMinutes, display);
 };
 
 
