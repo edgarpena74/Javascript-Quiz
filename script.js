@@ -16,7 +16,7 @@ let begin = confirm("Click OK to begin the quiz")
 console.log(begin)
 
 
-let answersArray = []
+
 
 
 let funkArray = [
@@ -42,7 +42,7 @@ let funkArray = [
 ]
 
 let counter = 0;
-
+let answersArray = []
 
 let answerClick = function(e){
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
@@ -56,16 +56,30 @@ let answerClick = function(e){
     //   answersArray[countSer] = value
     //   let value  = this.getAttribute("data-answer");
     // let value = this.value;  
+    console.log(answersArray + "   ****value before pop");
+    if(this){
+        answersArray.pop()
+    }
+    console.log(answersArray + "   ******this will show if popped")
+    answersArray.push(value)
+    console.log(answersArray + "***** new value")
+      
+   
+
     
       
-      console.log(value + "   value");
         
 
-    answersArray.push(value)
-    console.log("    ***" + answersArray)
+   
+
+    
 }
 
-// console.log("    ***" + answersArray)
+
+console.log(answersArray + "   did it work?")
+
+
+
  
 
 
@@ -109,6 +123,7 @@ let nextButton = function click() {
 }
 
 nextQuestion();
+// answerClick();
 
 
 
