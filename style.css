@@ -68,3 +68,7 @@ body #quiz #centerBox {
   visibility: hidden !important;
   color: white;
 }
+
+.hidden {
+  display: none;
+}
