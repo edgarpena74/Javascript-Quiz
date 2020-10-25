@@ -23,30 +23,57 @@ let funkArray = [
     {
         question : "do you want the funk? huuhhh?",
         answers : ["yeah", "funky", "funky funk", "we want the funk!"],
-        correctAnswer : "a"
+        // correctAnswer : "a"
 
     },
 
     {
         question : "do you want the funk?***",
         answers : ["yeah**", "funky**", "funky funk**", "we want the funk!**"],
-        correctAnswer : "a"
+        // correctAnswer : "a"
     },
 
     {
         question : "do you want the funk?//",
         answers : ["yeah//", "funky//", "funky funk//", "we want the funk!//"],
-        correctAnswer : "a"
+        // correctAnswer : "a"
     }
 
 ]
 
 let counter = 0;
 let answerChosen = ""
+let answer = "a";
+let score = 0;
 
-let answerClick = function(e){
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+        let clockStuff = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+            clearInterval(clockStuff);
+        }
+    }, 1000);
+    
+}
+
+window.onload = function () {
+    var twoMinutes = 5* 1,
+        display = document.querySelector('#time');
+    startTimer(twoMinutes, display);
+};
+
+let answerClick = function(){
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
-    console.log(e + "    this")
+    console.log(this + "    this")
     let value  = this.getAttribute("data-value"); 
   
     //this line grabs the next button and makes it visible
@@ -69,19 +96,41 @@ let answerClick = function(e){
 
     console.log(answerChosen + "   this is the answer chosen")
 
-    
-    
-   
-      
-   
-
-
+    if (answerChosen === "a") {
+        alert("oh shit it works so far")
+        submitA.style.background = "#55FF3A"
+        score++;
+        alert("GOOD JOB!!")
         
+    } else if (answerChosen == "b") {
+        alert("fuckin up")
+        submitB.style.background = "red";
+       score--;
+        
+    }else if (answerChosen == "c") {
+        alert("fuckin up")
+        submitC.style.background = "red";
+        score--;
+        
+    }else if (answerChosen == "d") {
+        alert("fuckin up")
+        submitD.style.background = "red";
+        score--;
+       
+    } else {
+        score = 0
+    }
 
-   
-
+    
+    console.log(score)
+    
+    
     
 }
+
+
+
+
 
 
 // function startTimer(duration, display) {
@@ -150,6 +199,11 @@ let nextButton = function click() {
     counter++;
     console.log(counter)
     nextQuestion();
+    submitA.style.background = "rgb(239, 239, 239";
+    submitB.style.background = "rgb(239, 239, 239";
+    submitC.style.background = "rgb(239, 239, 239";
+    submitD.style.background = "rgb(239, 239, 239";
+
 }
 
 nextQuestion();
