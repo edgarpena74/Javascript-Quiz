@@ -14,10 +14,7 @@ let rowQ = document.querySelector("#rowQ");
 let done = document.querySelector("#done");
 let userScore = document.querySelector("#userScore");
 let userTxt = document.querySelector("userTxt");
-var todoInput = document.querySelector("#todo-text");
-var todoForm = document.querySelector("#todo-form");
-var todoList = document.querySelector("#todo-list");
-var todoCountSpan = document.querySelector("#todo-count");
+
 
 
 let begin = confirm("Click OK to begin the quiz")
@@ -53,7 +50,7 @@ let counter = 0;
 let answerChosen = ""
 let answer = "a";
 let score = 0;
-let todos = ["Learn HTML", "Learn CSS", "Learn JavaScript"];
+
 
 
 function startTimer(duration, display) {
