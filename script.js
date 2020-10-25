@@ -10,6 +10,14 @@ let answerC = document.querySelector("#answerC");
 let submitD = document.querySelector("#submitD");
 let answerD = document.querySelector("#answerD");
 let next = document.querySelector("#next");
+let rowQ = document.querySelector("#rowQ");
+let done = document.querySelector("#done");
+let userScore = document.querySelector("#userScore");
+let userTxt = document.querySelector("userTxt");
+var todoInput = document.querySelector("#todo-text");
+var todoForm = document.querySelector("#todo-form");
+var todoList = document.querySelector("#todo-list");
+var todoCountSpan = document.querySelector("#todo-count");
 
 
 let begin = confirm("Click OK to begin the quiz")
@@ -45,6 +53,8 @@ let counter = 0;
 let answerChosen = ""
 let answer = "a";
 let score = 0;
+let todos = ["Learn HTML", "Learn CSS", "Learn JavaScript"];
+
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -66,63 +76,67 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var twoMinutes = 5* 1,
+    var twoMinutes = 60* 2,
         display = document.querySelector('#time');
     startTimer(twoMinutes, display);
 };
 
 let answerClick = function(){
+    
     //you'll notice that you can grab the clicked element's VALUE. Good job on setting up values in HTML!
     console.log(this + "    this")
     let value  = this.getAttribute("data-value"); 
+    let endScore = 3;
   
     //this line grabs the next button and makes it visible
     next.style.visibility = "visible";
-  
-    //change the answersArray at index "counter" to the selected answer choice (a-d)
-    //   answersArray[countSer] = value
-    //   let value  = this.getAttribute("data-answer");
-    // let value = this.value;  
     
-    // console.log(answer + "   ****value before pop");
-    // if(this){
-    //     answersArray.pop()
-    // }
-    // console.log(answer + "   ******this will show if popped")
-    // answersArray.push(value)
-    // console.log(answer + "***** new value")
+  
+
 
     answerChosen = value;
 
     console.log(answerChosen + "   this is the answer chosen")
 
     if (answerChosen === "a") {
-        alert("oh shit it works so far")
+       
         submitA.style.background = "#55FF3A"
         score++;
-        alert("GOOD JOB!!")
-        
+        // alert("GOOD JOB!!")
     } else if (answerChosen == "b") {
-        alert("fuckin up")
         submitB.style.background = "red";
-       score--;
-        
     }else if (answerChosen == "c") {
-        alert("fuckin up")
         submitC.style.background = "red";
-        score--;
-        
     }else if (answerChosen == "d") {
-        alert("fuckin up")
         submitD.style.background = "red";
-        score--;
+        
        
-    } else {
-        score = 0
-    }
-
+    } 
     
-    console.log(score)
+    console.log("score is:   " + score)
+    
+    console.log(endScore)
+
+    if (endScore === score){
+        // localStorage.clear();
+        next.style.visibility = "hidden";
+        userScore.style.visibility = "visible";
+        question.textContent = "Your score is " +  score + " out of 3";
+        answerSection.innerHTML = userScore.innerHTML;
+        // // Store
+        // localStorage.lastname = "Smith";
+        // // Retrieve
+        // document.getElementById("userTxt").textContent = localStorage.lastname;
+        
+            
+        
+    }
+    
+   
+    
+       
+    
+   
     
     
     
@@ -130,39 +144,6 @@ let answerClick = function(){
 
 
 
-
-
-
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//         setInterval(function () {
-//         minutes = parseInt(timer / 60, 10);
-//         seconds = parseInt(timer % 60, 10);
-
-//         minutes = minutes < 10 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds;
-
-//         if (--timer < 0) {
-//             timer = duration;
-//         }
-//     }, 1000);
-    
-// }
-
-// window.onload = function () {
-//     var twoMinutes = 60 * 2,
-//         display = document.querySelector('#time');
-//     startTimer(twoMinutes, display);
-// };
-
-
-
- 
-
-
- 
 
 let nextQuestion = function(){
     console.log(funkArray[counter])
@@ -175,18 +156,6 @@ let nextQuestion = function(){
     answerC.textContent = funkArray[counter].answers[2];
     answerD.textContent = funkArray[counter].answers[3];
 
-    // answerA.setAttribute("data-value", funkArray[counter].answers[0]);
-    // answerB.setAttribute("data-value", funkArray[counter].answers[1]);
-    // answerC.setAttribute("data-value", funkArray[counter].answers[2]);
-    // answerD.setAttribute("data-value", funkArray[counter].answers[3]);
-
-    // submitA.setAttribute("id", "answer");
-    // submitB.setAttribute("id", "answer");
-    // submitC.setAttribute("id", "answer");
-    // submitD.setAttribute("id", "answer");
-
-    // document.querySelector(".answer").addEventListener("click", answerClick);
-    
 
     //hide next button until answerCLick function is executed
     next.style.visibility = "hidden"
@@ -219,13 +188,8 @@ submitC.addEventListener("click", answerClick)
 submitD.addEventListener("click", answerClick)
 
 
-/*submitA.addEventListener("click", answerClick)
-submitB.addEventListener("click", answerClick)
-submitC.addEventListener("click", answerClick)
-submitD.addEventListener("click", answerClick)*/
 
-// console.log(answerClick)
-// console.log(answersArray)
+
 
 
 

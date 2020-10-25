@@ -45,8 +45,9 @@ body #quiz #centerBox {
   padding-top: 0% !important;
   justify-content: left;
   justify-content: center;
+  color: white !important;
 }
-.rowQ {
+#rowQ {
   border-bottom: thick white solid;
 }
 
@@ -60,8 +61,10 @@ body #quiz #centerBox {
   justify-content: center !important;
 }
 
-#begin {
-  font-size: 50px;
-  color: blue;
-  background: pink;
+#userScore {
+  display: flex !important;
+  text-align: center !important;
+  justify-items: center !important;
+  visibility: hidden !important;
+  color: white;
 }
