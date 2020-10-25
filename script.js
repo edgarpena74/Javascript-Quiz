@@ -14,13 +14,11 @@ let rowQ = document.querySelector("#rowQ");
 let done = document.querySelector("#done");
 let userScore = document.querySelector("#userScore");
 let userTxt = document.querySelector("userTxt");
-let time = 60;
-let timeFunc; 
-let startBtn = document.querySelector("#startBtn")
 
 
-// let begin = onclick("Click OK to begin the quiz")
-// console.log(begin)
+
+let begin = confirm("Click OK to begin the quiz")
+console.log(begin)
 
 
 
@@ -28,22 +26,22 @@ let startBtn = document.querySelector("#startBtn")
 
 let funkArray = [
     {
-        question : "do you want the funk? huuhhh?",
-        answers : ["yeah", "funky", "funky funk", "we want the funk!"],
-        correctAnswer : "a"
+        question : "where do we declare javascript in the html?",
+        answers : ["script", "link", "body", "header"],
+        // correctAnswer : "a"
 
     },
 
     {
-        question : "do you want the funk?***",
-        answers : ["yeah**", "funky**", "funky funk**", "we want the funk!**"],
-        correctAnswer : "a"
+        question : "How do we declare a variable from html as a global variable in javascript?",
+        answers : ["let (variable) = document.queryselector(('html variable'))", "Declaration of Independence", "let (variable) = inner.html.('variable')", "let variable = getAttribute.of.'variable'"],
+        // correctAnswer : "a"
     },
 
     {
-        question : "do you want the funk?//",
-        answers : ["yeah//", "funky//", "funky funk//", "we want the funk!//"],
-        correctAnswer : "a"
+        question : "What is an array?",
+        answers : ["A place where you store multiple values in a single variable", "x-ray", "one ray", "A query selector"],
+        // correctAnswer : "a"
     }
 
 ]
@@ -52,42 +50,33 @@ let counter = 0;
 let answerChosen = ""
 let answer = "a";
 let score = 0;
-let display = document.querySelector('#time');
-let intro = document.querySelector("#intro");
-let quizContainer = document.querySelector("#quizContainer");
-
-let begin = confirm("Click OK to begin the quiz")
-console.log(begin)
 
 
 
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+        let clockStuff = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-// const startQuiz = function () {
-//     display.textContent = time;
-//     timeFunc = setInterval(startTimer, 1000);
-//     intro.classList.add("hidden");
-//     quizContainer.classList.remove("hidden");
-//     nextQuestion();
-//     next.style.visibility = "hidden";
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
+        display.textContent = minutes + ":" + seconds;
 
-
-
-
-// };
-
-function startTimer() {
-    time--;
-    display.textContent = time
-    if (time <= 0){
-        time = 0;
-        display.textContent = time;
-        gameOver();
-    }
+        if (--timer < 0) {
+            timer = duration;
+            clearInterval(clockStuff);
+        }
+    }, 1000);
     
-
-
 }
+
+window.onload = function () {
+    var oneMinute = 60,
+        display = document.querySelector('#time');
+    startTimer(oneMinute, display);
+};
 
 let answerClick = function(){
     
@@ -99,26 +88,12 @@ let answerClick = function(){
     //this line grabs the next button and makes it visible
     next.style.visibility = "visible";
     
-    
-    
   
 
 
     answerChosen = value;
 
     console.log(answerChosen + "   this is the answer chosen")
-
-    // if (answerChosen === funkArray[counter].correctAnswer) {
-       
-    //     this.style.background = "#55FF3A"
-    //     score++;
-    //     // alert("GOOD JOB!!")
-    // } else {
-    //     this.style.background = "red";
-    //     time -= 10;
-    //     display.textContent = time;
-
-    // } 
 
     if (answerChosen === "a") {
        
@@ -127,13 +102,13 @@ let answerClick = function(){
         // alert("GOOD JOB!!")
     } else if (answerChosen == "b") {
         submitB.style.background = "red";
-        time -= 10;
+        oneMinute -= 10;
     }else if (answerChosen == "c") {
         submitC.style.background = "red";
-        time -= 10;
+        oneMinute -= 10;
     }else if (answerChosen == "d") {
         submitD.style.background = "red";
-        time -= 10;
+        oneMinute -= 10;
         
        
     } 
@@ -148,7 +123,10 @@ let answerClick = function(){
         userScore.style.visibility = "visible";
         question.textContent = "Your score is " +  score + " out of 3";
         answerSection.innerHTML = userScore.innerHTML;
-
+        // // Store
+        // localStorage.lastname = "Smith";
+        // // Retrieve
+        // document.getElementById("userTxt").textContent = localStorage.lastname;
         
             
         
@@ -189,66 +167,25 @@ let nextButton = function click() {
    
     counter++;
     console.log(counter)
-    // if(counter === funkArray.length){
-    //     gameOver ();
-    // } else{
-    // nextQuestion();
+    nextQuestion();
     submitA.style.background = "rgb(239, 239, 239";
     submitB.style.background = "rgb(239, 239, 239";
     submitC.style.background = "rgb(239, 239, 239";
     submitD.style.background = "rgb(239, 239, 239";
-    }
+
 }
 
-// const gameOver = function (){
-//     clearInterval(timeFunc);
-//     let gameoverEl = document.querySelector("#gameOver");
-//     gameoverEl.classList.remove("hidden");
-//     quizContainer.classList.add("hidden");
-//     let endScore = document.querySelector("#endScore");
-//     endScore.textContent = time;
-
-
-// }
-
-// const getHighscores = function () {
-//     let endScore = document.querySelector("#endScore");
-//     let score = endScore.textContent;
-//     let initials = document.getElementById("#initials");
+nextQuestion();
 
 
 
 
-// }
-
-let submitInitials = document.querySelector("submitInitials");
 
 
-
-
-// submitInitials.add("click", getHighscores)
-startBtn.addEventListener("click", startQuiz)
 submitA.addEventListener("click", answerClick)
 submitB.addEventListener("click", answerClick)
 submitC.addEventListener("click", answerClick)
 submitD.addEventListener("click", answerClick)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
