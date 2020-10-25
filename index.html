@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Javascript Quiz</title>
+</head>
+
+<body>
+
+
+
+    <div id="quiz">
+        <section id="centerBox" class="flex-box">
+            <div id="container" class="container">
+                <div id="jsHeader" class="row">
+                    <h1>Javascript Quiz</h1>
+                </div>
+                <!-- <div id="intro">
+                    <p> rules</p>
+                    <button id="startBtn">Start</button>
+                </div> -->
+                
+                
+                    <div id="questionSection" class="row">
+
+                        <span id="question">
+                            Questions will go here. Questions will go here Questions will go hereQuestions will go
+                            hereQuestions will go hereQuestions will go hereQuestions will go hereQuestions will go
+                            hereQuestions will go hereQuestions will go here
+                        </span>
+
+                    </div>
+                    <br>
+                    <div id="answerSection">
+                        <div class="row" id="rowQ">
+                            <div class="col-md-12">
+                                <div id="done">
+                                    <button type="button" id="submitA" data-value="a"> A </button>
+                                    <span id="answerA">ANSWER WILL GO HERE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row" id="rowQ">
+                            <div class="col-md-12">
+                                <div id="done">
+                                    <button type="button" id="submitB" data-value="b"> B </button>
+                                    <span id="answerB">ANSWER WILL GO HERE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row" id="rowQ">
+                            <div class="col-md-12">
+                                <div id="done">
+                                    <button type="button" id="submitC" data-value="c"> C </button>
+                                    <span id="answerC">ANSWER WILL GO HERE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row" id="rowQ">
+                            <div class="col-md-12">
+                                <div id="done">
+                                    <button type="button" id="submitD" data-value="d"> D </button>
+                                    <span id="answerD">ANSWER WILL GO HERE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="userScore">
+
+                    </div>
+
+
+
+
+                <button id="next" type="button" onclick="nextButton()"> Next </button>
+                   
+                <!-- <div id="gameOver" class="hidden">
+                    <h2>Game Over</h2>
+                    <p>Final Score : <span id="endScore"></span></p>
+                    <p>Enter Initials: <input type="text" id="initials">
+                    <button id="submitInitials">submit</button>
+                    </p>
+                </div> -->
+
+            </div>
+
+
+
+
+        </section>
+
+        <div>Time Left <span id="time">1:00</span> minutes NO PRESSURE!</div>
+    </div>
+
+    
+
+
+    <script src="./script.js">
+
+
+    </script>
+
+</body>
+
+</html>
